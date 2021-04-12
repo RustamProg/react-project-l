@@ -17,9 +17,9 @@ namespace FirstReactProject.Models
         public int Age { get; set; }
         
         [Column(TypeName = "nvarchar(50)")]
-        public int locationCountry { get; set; }
+        public string locationCountry { get; set; }
         
         [Column(TypeName = "nvarchar(50)")]
-        public int locationCity { get; set; }
+        public string locationCity { get; set; }
     }
 }
