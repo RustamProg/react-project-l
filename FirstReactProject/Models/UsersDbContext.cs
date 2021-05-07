@@ -11,5 +11,8 @@ namespace FirstReactProject.Models
         }
         
         public DbSet<User> Users { get; set; }
+        public DbSet<Adress> Adresses { get; set; }
+        public DbSet<Role> Roles { get; set; }
+        public DbSet<UserRoles> UserRoles { get; set; }
     }
 }

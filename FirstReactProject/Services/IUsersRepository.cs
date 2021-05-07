@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using FirstReactProject.Models;
 
 namespace FirstReactProject.Services
@@ -10,5 +11,6 @@ namespace FirstReactProject.Services
         List<User> GetUsersByCity(string cityName);
         List<User> GetAllUsers();
         List<User> GetByLocation(string country, string city);
+        Task InsertUser(User user);
     }
 }

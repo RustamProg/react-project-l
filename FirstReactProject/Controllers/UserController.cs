@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using FirstReactProject.Models;
 using FirstReactProject.Services;
 using Microsoft.AspNetCore.Mvc;
@@ -37,5 +38,13 @@ namespace FirstReactProject.Controllers
             var result = _usersRepository.GetByLocation(country, city);
             return result;
         }
+
+        [HttpPost("register")]
+        public async Task<IActionResult> RegisterUser(User user)
+        {
+            await _usersRepository.InsertUser(user);
+            return Ok(user);
+        }
+        
     }
 }
